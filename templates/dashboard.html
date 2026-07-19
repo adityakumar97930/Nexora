@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Nexora</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Nexora
+
+        </div>
+
+        <nav>
+
+            <a href="/">Home</a>
+
+            <a href="/about">About</a>
+
+            <a href="/internships">Internships</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/applications">My Applications</a>
+
+            <a href="/contact">Contact</a>
+
+            <a href="/logout">Logout</a>
+
+        </nav>
+
+    </header>
+
+    <section>
+
+        <h2>Student Dashboard</h2>
+
+        <div class="company-grid">
+
+            <div class="company-card">
+
+                <i class="fa-solid fa-user" style="font-size:50px;color:#2563eb;"></i>
+
+                <h3>Student Profile</h3>
+
+                <p><strong>Name:</strong> {{ name }}</p>
+
+                <p><strong>Email:</strong> {{ email }}</p>
+
+                <p><strong>Skills:</strong> {{ skills }}</p>
+
+            </div>
+
+            <div class="company-card">
+
+                <i class="fa-solid fa-briefcase" style="font-size:50px;color:#2563eb;"></i>
+
+                <h3>Available Internships</h3>
+
+                <h2>6</h2>
+
+                <a href="/internships">
+
+                    <button>
+
+                        Browse
+
+                    </button>
+
+                </a>
+
+            </div>
+
+            <div class="company-card">
+
+                <i class="fa-solid fa-file-circle-check" style="font-size:50px;color:#2563eb;"></i>
+
+                <h3>Applied Internships</h3>
+
+                <h2>0</h2>
+
+                <a href="/applications">
+
+                    <button>
+
+                        View
+
+                    </button>
+
+                </a>
+
+            </div>
+
+            <div class="company-card">
+
+                <i class="fa-solid fa-address-book" style="font-size:50px;color:#2563eb;"></i>
+
+                <h3>Contact Support</h3>
+
+                <p>Need help?</p>
+
+                <a href="/contact">
+
+                    <button>
+
+                        Contact Us
+
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <h2>Nexora</h2>
+
+        <p>Smart Internship Recommendation Portal</p>
+
+        <p>© 2026 Nexora. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>

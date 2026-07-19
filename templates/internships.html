@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Internships | Nexora</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Nexora
+        </div>
+
+        <nav>
+
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/internships">Internships</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <a href="/contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <section>
+
+        <h2>Find Your Internship</h2>
+
+        <form method="GET" action="/internships">
+
+            <input type="text" name="search" placeholder="Search Company, Role or Location"
+                value="{{ search if search else '' }}">
+
+            <button type="submit">
+
+                Search
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <section>
+
+        <div class="company-grid">
+
+            {% if internships %}
+
+            {% for internship in internships %}
+
+            <div class="company-card">
+
+                <h3>{{ internship[2] }}</h3>
+
+                <p><strong>Company:</strong> {{ internship[1] }}</p>
+
+                <p><strong>Location:</strong> {{ internship[3] }}</p>
+
+                <p><strong>Stipend:</strong> {{ internship[4] }}</p>
+
+                <p><strong>Duration:</strong> {{ internship[5] }}</p>
+
+                <a href="/internship/{{ internship[0] }}">
+
+                    <button>
+
+                        View Details
+
+                    </button>
+
+                </a>
+
+            </div>
+
+            {% endfor %}
+
+            {% else %}
+
+            <h2>No internships found.</h2>
+
+            {% endif %}
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <h2>Nexora</h2>
+
+        <p>Smart Internship Recommendation Portal</p>
+
+        <p>© 2026 Nexora. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>

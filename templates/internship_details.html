@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Internship Details | Nexora</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Nexora
+
+        </div>
+
+        <nav>
+
+            <a href="/">Home</a>
+
+            <a href="/about">About</a>
+
+            <a href="/internships">Internships</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/applications">My Applications</a>
+
+            <a href="/contact">Contact</a>
+
+            <a href="/logout">Logout</a>
+
+        </nav>
+
+    </header>
+
+    <section>
+
+        <h2>Internship Details</h2>
+
+        <div class="company-card" style="max-width:850px;margin:auto;text-align:left;">
+
+            <h2 style="color:#2563eb;">
+                {{ internship[2] }}
+            </h2>
+
+            <p><strong>Company:</strong> {{ internship[1] }}</p>
+
+            <p><strong>Location:</strong> {{ internship[3] }}</p>
+
+            <p><strong>Stipend:</strong> {{ internship[4] }}</p>
+
+            <p><strong>Duration:</strong> {{ internship[5] }}</p>
+            <br>
+
+            <h3>Job Description</h3>
+
+            <p>
+
+                Google is looking for enthusiastic students who are interested in web development.
+                The selected intern will work with experienced developers on real-world frontend
+                projects using modern web technologies.
+
+            </p>
+
+            <br>
+
+            <h3>Required Skills</h3>
+
+            <ul style="margin-left:25px;line-height:2;">
+
+                <li>HTML5</li>
+
+                <li>CSS3</li>
+
+                <li>JavaScript</li>
+
+                <li>Basic Git & GitHub</li>
+
+                <li>Good Communication Skills</li>
+
+            </ul>
+
+            <br>
+
+            <h3>Eligibility</h3>
+
+            <ul style="margin-left:25px;line-height:2;">
+
+                <li>B.Tech / BCA / MCA Students</li>
+
+                <li>Minimum CGPA 6.5</li>
+
+                <li>Basic Programming Knowledge</li>
+
+            </ul>
+
+            <br>
+
+            <h3>Benefits</h3>
+
+            <ul style="margin-left:25px;line-height:2;">
+
+                <li>Certificate of Completion</li>
+
+                <li>Flexible Working Hours</li>
+
+                <li>Hands-on Industry Experience</li>
+
+                <li>Mentorship by Industry Experts</li>
+
+                <li>Pre-Placement Opportunity</li>
+
+            </ul>
+
+            <br>
+
+            <a href="/apply/{{ internship[0] }}">
+
+                <button>
+
+                    Apply Now
+
+                </button>
+
+            </a>
+
+            <a href="/internships">
+
+                <button style="margin-left:15px;background:#6b7280;">
+
+                    Back
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <h2>Nexora</h2>
+
+        <p>Smart Internship Recommendation Portal</p>
+
+        <p>© 2026 Nexora. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>

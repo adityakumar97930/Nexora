@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Applications | Nexora</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Nexora
+
+        </div>
+
+        <nav>
+
+            <a href="/">Home</a>
+
+            <a href="/about">About</a>
+
+            <a href="/internships">Internships</a>
+
+            <a href="/dashboard">Dashboard</a>
+
+            <a href="/applications">My Applications</a>
+
+            <a href="/contact">Contact</a>
+
+            <a href="/logout">Logout</a>
+
+        </nav>
+
+    </header>
+
+    <section>
+
+        <h2>My Applications</h2>
+
+        <div class="company-grid">
+
+            {% if applications %}
+
+            {% for app in applications %}
+
+            <div class="company-card">
+
+                <h3>{{ app[1] }}</h3>
+
+                <p><strong>Company:</strong> {{ app[0] }}</p>
+
+                <p><strong>Location:</strong> {{ app[2] }}</p>
+
+                <p><strong>Stipend:</strong> {{ app[3] }}</p>
+
+                <p><strong>Duration:</strong> {{ app[4] }}</p>
+
+                <p><strong>Status:</strong> {{ app[5] }}</p>
+
+                <button disabled>
+
+                    {{ app[5] }}
+
+                </button>
+
+            </div>
+
+            {% endfor %}
+
+            {% else %}
+
+            <h3 style="text-align:center; width:100%;">
+
+                You haven't applied for any internships yet.
+
+            </h3>
+
+            {% endif %}
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <h2>Nexora</h2>
+
+        <p>Smart Internship Recommendation Portal</p>
+
+        <p>© 2026 Nexora. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>

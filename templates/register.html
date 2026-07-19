@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Nexora</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Nexora
+
+        </div>
+
+        <nav>
+
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/internships">Internships</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <a href="/contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <section>
+
+        <h2>Create Your Account</h2>
+
+        <form action="/register" method="POST">
+
+            <label>Full Name</label>
+
+            <input type="text" name="name" placeholder="Enter your full name" required>
+
+            <label>Email Address</label>
+
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <label>Password</label>
+
+            <input type="password" name="password" placeholder="Create password" required>
+
+            <label>Confirm Password</label>
+
+            <input type="password" name="confirm_password" placeholder="Confirm password" required>
+
+            <label>Skills</label>
+
+            <input type="text" name="skills" placeholder="Example: Python, HTML, SQL">
+
+            <button type="submit">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+        <p style="text-align:center;margin-top:25px;">
+
+            Already have an account?
+
+            <a href="/login">Login</a>
+
+        </p>
+
+    </section>
+
+    <footer>
+
+        <h2>Nexora</h2>
+
+        <p>Smart Internship Recommendation Portal</p>
+
+        <p>© 2026 Nexora. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>

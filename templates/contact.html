@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Nexora</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Nexora
+
+        </div>
+
+        <nav>
+
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/internships">Internships</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <a href="/contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <section>
+
+        <h2>Contact Us</h2>
+
+        <form>
+
+            <label>Full Name</label>
+
+            <input type="text" placeholder="Enter your name">
+
+            <label>Email</label>
+
+            <input type="email" placeholder="Enter your email">
+
+            <label>Subject</label>
+
+            <input type="text" placeholder="Enter subject">
+
+            <label>Message</label>
+
+            <textarea rows="6" placeholder="Write your message"></textarea>
+
+            <button type="submit">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <section>
+
+        <h2>Our Contact Information</h2>
+
+        <div class="company-grid">
+
+            <div class="company-card">
+
+                <i class="fa-solid fa-envelope" style="font-size:45px;color:#2563eb;"></i>
+
+                <h3>Email</h3>
+
+                <p>support@nexora.com</p>
+
+            </div>
+
+            <div class="company-card">
+
+                <i class="fa-solid fa-phone" style="font-size:45px;color:#2563eb;"></i>
+
+                <h3>Phone</h3>
+
+                <p>+91 9876543210</p>
+
+            </div>
+
+            <div class="company-card">
+
+                <i class="fa-solid fa-location-dot" style="font-size:45px;color:#2563eb;"></i>
+
+                <h3>Location</h3>
+
+                <p>Gorakhpur, Uttar Pradesh</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <h2>Nexora</h2>
+
+        <p>Smart Internship Recommendation Portal</p>
+
+        <p>© 2026 Nexora. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
