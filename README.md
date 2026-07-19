@@ -108,7 +108,17 @@ docker pull adit4525/nexora:latest
 
 ## 📸 Screenshots
 
-(Add screenshots of your Home Page, Login Page, and Internship Page here.)
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Register Page
+![Register Page](screenshots/register.png)
+
+### Internship Page
+![Internship Page](screenshots/internships.png)
 
 ---
 
